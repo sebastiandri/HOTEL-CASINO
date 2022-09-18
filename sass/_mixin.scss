@@ -1,0 +1,9 @@
+@mixin redes-footer($radio,$color,$solid) {
+
+    border-radius: $radio;
+    
+    border-color: $color;
+    
+    border-style:$solid;
+    
+    }

@@ -1,0 +1,51 @@
+* { 
+    margin: 0%; 
+    padding: 0%; 
+   box-sizing: border-box;
+
+    } 
+    
+    
+    body{
+    
+    background: linear-gradient( #ff0000, #ff02, #00b828, #10bfeb, #dddd);
+    
+    .mainhtml{
+    
+    display: flex;
+    
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    
+    .card {
+    
+    margin:20px;
+    
+    }
+    
+    .card-body{
+    
+    border-style: ridge;
+    
+    border-color: #074b34;
+    
+    h5{
+    
+    color: #9a15d8;
+    
+    }
+    
+    p{
+    
+    color: #650672;
+    
+    }
+    
+    }
+    
+    } 
+}
+    

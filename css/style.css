@@ -1,0 +1,141 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#ff0000, #ff02, #00b828, #10bfeb, #dddd);
+}
+
+body .mainhtml {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body .mainhtml .card {
+  margin: 20px;
+}
+
+
+body .mainhtml .card-body {
+  border-style: ridge;
+  border-color: #074b34;
+}
+
+body .mainhtml .card-body h5 {
+  color: #9a15d8;
+}
+
+body .mainhtml .card-body p {
+  color: #650672;
+}
+.formu {
+  text-align: center;
+}
+
+#formus {
+  text-align: center;
+  margin-left: 30%;
+}
+
+.gallery {
+  padding-bottom: 3em;
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 160px;
+  grid-template-areas: "img1 img1 img2 img3" "img1 img1 img4 img4" "img5 img5 img6 img7" "img5 img5 img8 img8";
+  gap: .8em;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__picture {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery__picture--g1 {
+  grid-area: img1;
+}
+
+.gallery__picture--g2 {
+  grid-area: img2;
+}
+
+.gallery__picture--g3 {
+  grid-area: img3;
+  content: "hoola";
+}
+
+.gallery__picture--g4 {
+  grid-area: img4;
+}
+
+.gallery__picture--g5 {
+  grid-area: img5;
+}
+
+.gallery__picture--g6 {
+  grid-area: img6;
+}
+
+.gallery__picture--g7 {
+  grid-area: img7;
+}
+
+.gallery__picture--g8 {
+  grid-area: img8;
+}
+
+.gallery__picture::before {
+  content: "HOTEL CASINO DRI";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(#e65959, #3b3bd4, #55dd55);
+  transform: scale(0);
+  transition: transform .4s;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.gallery__picture::before:hover::before {
+  transform: scale(1) rotate(360deg);
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img1 img1" "img1 img1" "img2 img3" "img4 img4" "img4 img4" "img5 img5" "img5 img5" "img6 img7" "img8 img8" "img8 img8";
+  }
+  .gallery .__picture::before {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  margin: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .redes {
+  border-radius: 20%;
+  border-color: #97ecd0;
+  border-style: solid;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,110 @@
+.formu{
+    text-align: center;
+  }
+  
+  #formus {text-align: center;
+  margin-left: 30%;}
+  
+
+.gallery{
+    padding-bottom:3em;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 160px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img4"
+    "img5 img5 img6 img7"
+    "img5 img5 img8 img8";
+    gap: .8em;
+
+   &__img{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+&__picture{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+ &--g1{
+    grid-area: img1;
+  }
+  
+  &--g2{
+      grid-area: img2;
+  }
+  
+  &--g3{
+      grid-area: img3;
+      
+  }
+  
+  &--g4{
+      grid-area: img4;
+  }
+  
+  &--g5{
+      grid-area: img5;
+  }
+  
+  &--g6{
+      grid-area: img6;
+  }
+  
+  &--g7{
+      grid-area: img7;
+  }
+  
+  &--g8{
+      grid-area: img8;
+  }
+}
+
+&__picture::before{
+    content: "HOTEL CASINO DRI";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(#e65959, #3b3bd4, #55dd55);
+   transform: scale(0);
+   transition: transform .4s;
+   color: aliceblue;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.5rem;
+
+     &:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+}
+}
+
+@media (max-width:400px) {
+
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "img1 img1"
+        "img1 img1"
+        "img2 img3"
+        "img4 img4"
+        "img4 img4"
+        "img5 img5"
+        "img5 img5"
+        "img6 img7"
+        "img8 img8"
+        "img8 img8";
+        .__picture::before{
+            font-size: 1rem;
+            
+    
+        }
+    }
+
+   
+}
